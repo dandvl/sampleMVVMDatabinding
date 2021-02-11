@@ -8,11 +8,14 @@ import androidx.lifecycle.ViewModel
 
 class ZViewModel : ViewModel(){
 
-    private var _visible = MutableLiveData(false)
-    var visibleOuter : LiveData<Boolean> = _visible
+    private var _visible = MutableLiveData("si")
+    var visibleOuter : LiveData<String> = _visible
 
     fun setVisibilidad(view: View){
-        _visible.value = _visible.value?.not()
+        if(_visible.value == "si")
+         _visible.value = "no"
+        else
+         _visible.value = "si"
     }
 
 }

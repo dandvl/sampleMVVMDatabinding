@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="Banner"
-            android:visibility="@{viewModel.visibleOuter ? View.VISIBLE : View.GONE}"
+            android:visibility='@{viewModel.visibleOuter.equals("si") ? View.VISIBLE : View.GONE}'
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
